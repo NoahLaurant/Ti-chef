@@ -19,6 +19,7 @@
 //return : rien car elle affiche
 function afficheRecette(tableauRecette) {
     tableauRecette.forEach(recette => {
+        let ingredientsList = ""
         let recetteCard = ` 
           <div class="flex">
                 <h2 class="orange">${recette.nom}</h2>
@@ -70,7 +71,7 @@ function afficheRecette(tableauRecette) {
                 <div class="flex w-35">
 
                     <h3 class="orange">Etapes</h3>
-                    <ul>li> ${etapesList}</li></ul>
+                    <ul>${recette.etapes}</ul>
 
                 </div>
 
